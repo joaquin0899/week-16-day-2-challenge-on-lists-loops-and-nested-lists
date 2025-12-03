@@ -86,20 +86,10 @@ third_position = [sublist[2] for sublist in all_list]
 
 print(third_position)
 
-
-all_digits = []
-for number in third_position:
-    digits = [int(digit) for digit in str(number)]
-    all_digits.extend(digits)
-
-print(all_digits)
-
-
-# if third_position > 5:
-#     print("Large order detected! ")
-# else:
-#     print("Order within normal limits. ")
-
+if any(quantity > 5 for quantity in third_position):
+    print("Large order detected!")
+else:
+    print("Orders within normal limits.")
 
 
 
@@ -108,6 +98,11 @@ print(all_digits)
 # Re-organize the quantity list from **smallest to largest** and display the final result.
 
 # ---
+
+
+third_position.sort()
+print(third_position)
+
 
 # ## Challenge Extension: Classroom Storage Grid
 
